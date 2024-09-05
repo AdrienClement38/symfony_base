@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1> Formation : {{ training.name }} </h1>
+
+    <p> {{ training.description }} </p>
+
+    <h2> Liste des modules </h2>
+    <ul>
+	    {% for module in training.modules %}
+	       <li><a href=" {{ path('show_module' , { 'id' : module.id} ) }}">{{ module.name }} </a></li>
+	    {% endfor %}
+    </ul>
+
+    <p><em> Dispensé par l'ecole : <a href="{{ path('show_school' , { 'id' : training.school.id} ) }}"> {{ training.school.name }} </a> </em> </p>
+{% endblock %}

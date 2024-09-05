@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training List</title>
+</head>
+<body>
+<h1>Training List</h1>
+<form method="get" action="{{ path('training_list') }}">
+    <h2>Filter by Modules</h2>
+    <div>
+        {% for module in modules %}
+            <label>
+                <input type="checkbox" name="modules[]" value="{{ module.id }}" {% if module.id in selectedModules %}checked{% endif %}>
+                {{ module.name }}
+            </label>
+        {% endfor %}
+    </div>
+    <div>
+        <label>
+            <input type="checkbox" name="match_any_module" value="1" {% if matchAnyModule %}checked{% endif %}>
+            Match Any Module
+        </label>
+    </div>
+    <button type="submit">Filter</button>
+</form>
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Modules</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for training in trainings %}
+        <tr>
+            <td>{{ training.name }}</td>
+            <td>{{ training.description }}</td>
+            <td>
+                <ul>
+                    {% for module in training.modules %}
+                        <li>
+                            {{ module.name }}
+                            <a href="{{ path('module_delete', { 'trainingId': training.id, 'moduleId': module.id }) }}" onclick="return confirm('Are you sure you want to delete this module?');">
+                                &#x2716; <!-- Cross icon -->
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

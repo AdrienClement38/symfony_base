@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Recherche de formation par module</h1>
+
+    <form method="get" action="{{ path('training_list') }}">
+        <h3>Modules:</h3>
+        {% for module in modules %}
+            <label>
+                <input type="checkbox" name="modules[]" value="{{ module.id }}" 
+                    {% if module.id in selectedModules %}checked{% endif %}>
+                {{ module.name }}
+            </label>
+            <br>
+        {% endfor %}
+
+        <br>
+        <label>
+            <input type="checkbox" name="match_any_module" value="1" 
+                {% if matchAnyModule %}checked{% endif %}>
+            Afficher les formations qui contiennent un des modules
+        </label>
+        <br><br>
+
+        <button type="submit">Rechercher</button>
+    </form>
+
+    <h2>Formations</h2>
+    {% if trainings is not empty %}
+        <table border="1" cellpadding="10" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th align="left">Nom de la formation</th>
+                    <th align="left">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for training in trainings %}
+                    <tr>
+                        <td>{{ training.name }}</td>
+                        <td>{{ training.description }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Aucune formation ne dispense ce module</p>
+    {% endif %}
+{% endblock %}

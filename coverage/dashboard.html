@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for /var/www/html/src</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="_css/bootstrap.min.css?v=9.2.32" rel="stylesheet" type="text/css">
+  <link href="_css/nv.d3.min.css?v=9.2.32" rel="stylesheet" type="text/css">
+  <link href="_css/style.css?v=9.2.32" rel="stylesheet" type="text/css">
+  <link href="_css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="index.html">/var/www/html/src</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/DefaultController.php.html#10">App\Controller\DefaultController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ModuleController.php.html#18">App\Controller\ModuleController</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/PersonRepository.php.html#12">App\Repository\PersonRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/SchoolRepository.php.html#12">App\Repository\SchoolRepository</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/Greetings.php.html#5">App\Service\Greetings</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Module.php.html#9">App\Entity\Module</a></td><td class="text-right">58%</td></tr>
+       <tr><td><a href="Entity/School.php.html#10">App\Entity\School</a></td><td class="text-right">58%</td></tr>
+       <tr><td><a href="Entity/Training.php.html#10">App\Entity\Training</a></td><td class="text-right">61%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Controller/DefaultController.php.html#12"><abbr title="App\Controller\DefaultController::index">index</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/DefaultController.php.html#21"><abbr title="App\Controller\DefaultController::goodbye">goodbye</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ModuleController.php.html#23"><abbr title="App\Controller\ModuleController::addSchoolAction">addSchoolAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ModuleController.php.html#57"><abbr title="App\Controller\ModuleController::schoolsAction">schoolsAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ModuleController.php.html#67"><abbr title="App\Controller\ModuleController::schoolAction">schoolAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ModuleController.php.html#77"><abbr title="App\Controller\ModuleController::trainingAction">trainingAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Controller/ModuleController.php.html#88"><abbr title="App\Controller\ModuleController::moduleAction">moduleAction</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Module.php.html#54"><abbr title="App\Entity\Module::getDescription">getDescription</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Module.php.html#59"><abbr title="App\Entity\Module::addTraining">addTraining</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Module.php.html#65"><abbr title="App\Entity\Module::removeTraining">removeTraining</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Module.php.html#70"><abbr title="App\Entity\Module::getTrainings">getTrainings</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/School.php.html#38"><abbr title="App\Entity\School::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/School.php.html#62"><abbr title="App\Entity\School::getName">getName</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/School.php.html#73"><abbr title="App\Entity\School::getDescription">getDescription</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/School.php.html#84"><abbr title="App\Entity\School::removeTraining">removeTraining</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/School.php.html#89"><abbr title="App\Entity\School::getTrainings">getTrainings</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Training.php.html#42"><abbr title="App\Entity\Training::getId">getId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Training.php.html#69"><abbr title="App\Entity\Training::setSchoolId">setSchoolId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Training.php.html#75"><abbr title="App\Entity\Training::getSchoolId">getSchoolId</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Training.php.html#86"><abbr title="App\Entity\Training::getSchool">getSchool</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Training.php.html#97"><abbr title="App\Entity\Training::removeModule">removeModule</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Entity/Training.php.html#102"><abbr title="App\Entity\Training::getModules">getModules</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/PersonRepository.php.html#14"><abbr title="App\Repository\PersonRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Repository/SchoolRepository.php.html#14"><abbr title="App\Repository\SchoolRepository::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/Greetings.php.html#7"><abbr title="App\Service\Greetings::greet">greet</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Service/Greetings.php.html#12"><abbr title="App\Service\Greetings::bye">bye</abbr></a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 9.2.32</a> using <a href="https://secure.php.net/" target="_top">PHP 8.2.23</a> and <a href="https://phpunit.de/">PHPUnit 9.6.20</a> at Wed Sep 4 9:43:56 UTC 2024.</small>
+    </p>
+   </footer>
+  </div>
+  <script src="_js/jquery.min.js?v=9.2.32" type="text/javascript"></script>
+  <script src="_js/d3.min.js?v=9.2.32" type="text/javascript"></script>
+  <script src="_js/nv.d3.min.js?v=9.2.32" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([5,0,0,0,0,0,2,1,0,0,0,5], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([26,0,0,0,0,0,0,0,0,0,0,23], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[0,2,"<a href=\"Controller\/DefaultController.php.html#10\">App\\Controller\\DefaultController<\/a>"],[0,5,"<a href=\"Controller\/ModuleController.php.html#18\">App\\Controller\\ModuleController<\/a>"],[100,3,"<a href=\"Controller\/TrainingController.php.html#14\">App\\Controller\\TrainingController<\/a>"],[100,3,"<a href=\"DataFixtures\/ModuleFixtures.php.html#10\">App\\DataFixtures\\ModuleFixtures<\/a>"],[100,6,"<a href=\"DataFixtures\/SchoolFixtures.php.html#12\">App\\DataFixtures\\SchoolFixtures<\/a>"],[58.333333333333336,9,"<a href=\"Entity\/Module.php.html#9\">App\\Entity\\Module<\/a>"],[58.333333333333336,9,"<a href=\"Entity\/School.php.html#10\">App\\Entity\\School<\/a>"],[61.111111111111114,13,"<a href=\"Entity\/Training.php.html#10\">App\\Entity\\Training<\/a>"],[100,0,"<a href=\"Kernel.php.html#8\">App\\Kernel<\/a>"],[0,1,"<a href=\"Repository\/PersonRepository.php.html#12\">App\\Repository\\PersonRepository<\/a>"],[0,1,"<a href=\"Repository\/SchoolRepository.php.html#12\">App\\Repository\\SchoolRepository<\/a>"],[100,3,"<a href=\"Repository\/TrainingRepository.php.html#11\">App\\Repository\\TrainingRepository<\/a>"],[0,2,"<a href=\"Service\/Greetings.php.html#5\">App\\Service\\Greetings<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[0,1,"<a href=\"Controller\/DefaultController.php.html#12\">App\\Controller\\DefaultController::index<\/a>"],[0,1,"<a href=\"Controller\/DefaultController.php.html#21\">App\\Controller\\DefaultController::goodbye<\/a>"],[0,1,"<a href=\"Controller\/ModuleController.php.html#23\">App\\Controller\\ModuleController::addSchoolAction<\/a>"],[0,1,"<a href=\"Controller\/ModuleController.php.html#57\">App\\Controller\\ModuleController::schoolsAction<\/a>"],[0,1,"<a href=\"Controller\/ModuleController.php.html#67\">App\\Controller\\ModuleController::schoolAction<\/a>"],[0,1,"<a href=\"Controller\/ModuleController.php.html#77\">App\\Controller\\ModuleController::trainingAction<\/a>"],[0,1,"<a href=\"Controller\/ModuleController.php.html#88\">App\\Controller\\ModuleController::moduleAction<\/a>"],[100,3,"<a href=\"Controller\/TrainingController.php.html#16\">App\\Controller\\TrainingController::list<\/a>"],[100,2,"<a href=\"DataFixtures\/ModuleFixtures.php.html#14\">App\\DataFixtures\\ModuleFixtures::load<\/a>"],[100,1,"<a href=\"DataFixtures\/ModuleFixtures.php.html#33\">App\\DataFixtures\\ModuleFixtures::getCreatedEntities<\/a>"],[100,6,"<a href=\"DataFixtures\/SchoolFixtures.php.html#14\">App\\DataFixtures\\SchoolFixtures::load<\/a>"],[100,1,"<a href=\"Entity\/Module.php.html#27\">App\\Entity\\Module::__construct<\/a>"],[100,1,"<a href=\"Entity\/Module.php.html#32\">App\\Entity\\Module::getId<\/a>"],[100,1,"<a href=\"Entity\/Module.php.html#37\">App\\Entity\\Module::setName<\/a>"],[100,1,"<a href=\"Entity\/Module.php.html#43\">App\\Entity\\Module::getName<\/a>"],[100,1,"<a href=\"Entity\/Module.php.html#48\">App\\Entity\\Module::setDescription<\/a>"],[0,1,"<a href=\"Entity\/Module.php.html#54\">App\\Entity\\Module::getDescription<\/a>"],[0,1,"<a href=\"Entity\/Module.php.html#59\">App\\Entity\\Module::addTraining<\/a>"],[0,1,"<a href=\"Entity\/Module.php.html#65\">App\\Entity\\Module::removeTraining<\/a>"],[0,1,"<a href=\"Entity\/Module.php.html#70\">App\\Entity\\Module::getTrainings<\/a>"],[100,1,"<a href=\"Entity\/School.php.html#27\">App\\Entity\\School::__construct<\/a>"],[0,1,"<a href=\"Entity\/School.php.html#38\">App\\Entity\\School::getId<\/a>"],[100,1,"<a href=\"Entity\/School.php.html#50\">App\\Entity\\School::setName<\/a>"],[0,1,"<a href=\"Entity\/School.php.html#62\">App\\Entity\\School::getName<\/a>"],[100,1,"<a href=\"Entity\/School.php.html#67\">App\\Entity\\School::setDescription<\/a>"],[0,1,"<a href=\"Entity\/School.php.html#73\">App\\Entity\\School::getDescription<\/a>"],[100,1,"<a href=\"Entity\/School.php.html#78\">App\\Entity\\School::addTraining<\/a>"],[0,1,"<a href=\"Entity\/School.php.html#84\">App\\Entity\\School::removeTraining<\/a>"],[0,1,"<a href=\"Entity\/School.php.html#89\">App\\Entity\\School::getTrainings<\/a>"],[100,1,"<a href=\"Entity\/Training.php.html#37\">App\\Entity\\Training::__construct<\/a>"],[0,1,"<a href=\"Entity\/Training.php.html#42\">App\\Entity\\Training::getId<\/a>"],[100,1,"<a href=\"Entity\/Training.php.html#47\">App\\Entity\\Training::setName<\/a>"],[100,1,"<a href=\"Entity\/Training.php.html#53\">App\\Entity\\Training::getName<\/a>"],[100,1,"<a href=\"Entity\/Training.php.html#58\">App\\Entity\\Training::setDescription<\/a>"],[100,1,"<a href=\"Entity\/Training.php.html#64\">App\\Entity\\Training::getDescription<\/a>"],[0,1,"<a href=\"Entity\/Training.php.html#69\">App\\Entity\\Training::setSchoolId<\/a>"],[0,1,"<a href=\"Entity\/Training.php.html#75\">App\\Entity\\Training::getSchoolId<\/a>"],[100,1,"<a href=\"Entity\/Training.php.html#80\">App\\Entity\\Training::setSchool<\/a>"],[0,1,"<a href=\"Entity\/Training.php.html#86\">App\\Entity\\Training::getSchool<\/a>"],[100,1,"<a href=\"Entity\/Training.php.html#91\">App\\Entity\\Training::addModule<\/a>"],[0,1,"<a href=\"Entity\/Training.php.html#97\">App\\Entity\\Training::removeModule<\/a>"],[0,1,"<a href=\"Entity\/Training.php.html#102\">App\\Entity\\Training::getModules<\/a>"],[0,1,"<a href=\"Repository\/PersonRepository.php.html#14\">App\\Repository\\PersonRepository::__construct<\/a>"],[0,1,"<a href=\"Repository\/SchoolRepository.php.html#14\">App\\Repository\\SchoolRepository::__construct<\/a>"],[100,1,"<a href=\"Repository\/TrainingRepository.php.html#13\">App\\Repository\\TrainingRepository::__construct<\/a>"],[100,1,"<a href=\"Repository\/TrainingRepository.php.html#24\">App\\Repository\\TrainingRepository::findByModules<\/a>"],[100,1,"<a href=\"Repository\/TrainingRepository.php.html#37\">App\\Repository\\TrainingRepository::findByAnyModule<\/a>"],[0,1,"<a href=\"Service\/Greetings.php.html#7\">App\\Service\\Greetings::greet<\/a>"],[0,1,"<a href=\"Service\/Greetings.php.html#12\">App\\Service\\Greetings::bye<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>

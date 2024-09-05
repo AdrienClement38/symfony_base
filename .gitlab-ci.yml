@@ -1,0 +1,21 @@
+variables:
+  PHP_VERSION: "8.2"
+
+default:
+  before_script:
+    - apt-get update && apt-get install -y unzip git curl libzip-dev
+    #- docker-php-ext-install zip
+
+symfony-tests:
+  image: composer
+  script:
+    - cp .env.test .env.test.local
+    - composer install
+    - vendor/bin/phpunit --configuration phpunit.xml.dist
+    - vendor/bin/php-cs-fixer fix --dry-run --diff
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == "develop"'
+    - if: '$CI_COMMIT_BRANCH == "main"'
+
+

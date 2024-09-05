@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        <nav style="background-color: #f8f8f8; padding: 10px;">
+            <ul style="list-style-type: none; margin: 0; padding: 0; display: flex; justify-content: flex-start;">
+                <li style="margin-right: 20px;"><a href="{{ path('show_schools') }}">Liste des écoles</a></li>
+                <li style="margin-right: 20px;"><a href="{{ path('training_list') }}">Recherche de formation</a></li>
+            </ul>
+        </nav>
+        {% block content %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Liste des Écoles</h1>
+
+    {% for school in schools %}
+        <div style="border: 1px solid #ddd; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
+            <h2 style="margin-top: 0;">École: {{ school.name }}</h2>
+            <p>{{ school.description }}</p>
+
+            <h3>Liste des formations</h3>
+            {% if school.trainings is not empty %}
+                <ul>
+                    {% for training in school.trainings %}
+                        <li><a href="{{ path('show_training', { 'id': training.id }) }}">{{ training.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p style="color: #888;">Aucune formation disponible</p>
+            {% endif %}
+        </div>
+    {% endfor %}
+{% endblock %}
